@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Management System</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Book Management System</h1>
+ 
+    <div class="add-book">
+      <input type="text" id="book-title" placeholder="Book Title" required>
+      <input type="text" id="book-author" placeholder="Author" required>
+      <input type="date" id="book-due-date" required>
+      <button id="add-book-btn">Add Book</button>
+    </div>
+
+    <h2>Your Book List</h2>
+     
+    <table id="book-list">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="book.js"></script>
+</body>
+</html>
