@@ -1,38 +1,60 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Management System</title>
-  <link rel="stylesheet" href="book.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Book</title>
+    <link rel="stylesheet" href="manage.css">
 </head>
+<!-- <style>
+    main{
+        margin-left: 550px;
+    }
+    div{
+        display:flex;
+        flex-direction: column;
+        
+    }
+    button{
+        height: 20px;
+        border-radius: 10%;
+        background-color:rgb(30, 138, 174);
+        color: white;
+    }
+   
+</style> -->
 <body>
-  <div class="container">
-    <h1>Book Management System</h1>
- 
-    <div class="add-book">
-      <input type="text" id="book-title" placeholder="Book Title" required>
-      <input type="text" id="book-author" placeholder="Author" required>
-      <input type="date" id="book-due-date" required>
-      <button id="add-book-btn">Add Book</button>
+    <div>
+        <a href="Management.html" style="background-color: aqua , ;">Home</a>
+        <a href="#">All books</a>
+        <a href="#">All Authors</a>
+        <a href="#">All genres</a>
+        <a href="#">All book-instances</a><hr>
     </div>
-
-    <h2>Your Book List</h2>
-     
-    <table id="book-list">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Due Date</th>
-          <th>Status</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-  <script src="book.js"></script>
+   <main> 
+    <h1 style="font-size: 35px;">Create Book</h1>
+    <label for="Title">Title:</label><br>
+    <input type="text" name="" id="n" placeholder="Name of Book">
+    <br><br>
+    <label for="Author">Author:</label><br>
+    <select name="" id="box"><option value="">Rothfuss Patrick</option></select>
+    <br><br>
+    <label for="summary">Summary:</label><br>
+    <input type="text" name="" id="s" placeholder="Summary">
+    <br><br>
+    <label for="isbn">ISBN:</label><br>
+    <input type="text" name="" id="i">
+    <br><br>
+    <label for="">Genre:</label><br>
+    <input type="checkbox" name="" id=""> 
+    <label for="fantasy">Fantasy</label>
+    <input type="checkbox" name="" id=""> 
+    <label for="fantasy">Science fiction</label>
+    <input type="checkbox" name="" id=""> 
+    <label for="fantasy">French Poetry</label>
+    <input type="checkbox" name="" id="">
+    <label for="action">Action</label><br><br>
+    <button >Submit</button>
+    </main>
 </body>
 </html>
