@@ -1,0 +1,85 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background:linear-gradient(to top, #ff7e5f, #feb47b);
+      color: #fff;
+    }
+
+    h1 {
+      font-size:44px;
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size:18px;
+      margin-bottom: 20px;
+      padding-left: 50px;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      background: #ff6f61;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff3d2e;
+    }
+  #btn{
+    font-size: 30px;
+   
+     margin: 10px;
+  }
+  .modal { 
+    display: none; 
+    position: fixed; 
+    top:0;
+    bottom:0;
+    width:100%; 
+    height: 100%; 
+    background-color: rgb(75, 14, 173,0.4);
+    padding-top: 30px;
+   } 
+    .modal-content { 
+      background-color: rgba(87, 12, 130, 0.6); 
+      margin:5% auto;
+      padding: 10px; 
+      border: 3px solid black;
+       width: 500px; 
+       height: 200px; 
+      text-align: center;
+     } 
+      .close { 
+      float: right; 
+      font-size: 28px;
+       font-weight: bold; 
+    } 
+     .close:hover, .close:focus { 
+       text-decoration: none; 
+      cursor: pointer;
+     }
+      .notification-button { 
+      margin: 10px; 
+      padding: 10px 20px;
+       cursor: pointer;
+       font-size: 28px;
+       background-color: blue;
+     }
+     p{
+      color:black;
+      font-size: 2rem;
+      font-family: Arial, sans-serif;
+     }
