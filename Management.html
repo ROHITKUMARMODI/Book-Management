@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Management System</title>
-    <link rel="stylesheet" href="manage.css">
-    <link rel="stylesheet" href="Page.html">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -14,57 +13,783 @@
     <div id="title"><b>BOOK MANAGEMENT SYSTEM</b></div>
 </section>
 
-
 <nav>
-    <a href="book3.html" >Create Book</a> |
-    <a href="view-books.html">View All Books</a> |
-    <a href="search-books.html">Search Books</a> |
-    <a href="profile.html">Profile</a> |
-    <a href="logout.html">Logout</a>
+    <a href="createb.html">Create Book</a> |
+    <a href="Viewbooks.html">View All Books</a> |
+    <!-- <a href="Searchbooks.html" id="search-nav">Search Books</a> | -->
+    <a href="Profile.html">Profile</a> |
+    <a href="login.html">Logout</a>
 </nav>
+ 
+<section id="search-bar-section">
+    <input type="text" id="search-bar" placeholder="Search books...">
+    <button id="search-btn" onclick="searchBooks()">Search</button>
+</section>
 
 <div class="container">
     <h1 id="select">Collection of Books</h1>
-    <div id="adddelete">
-        <button id="add">ADD</button>
-        <button id="delete">DELETE</button>
-    </div>
-    <div id="library">
-        <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Book Image">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFkMe6fYtk_pCaoMCDUo5nsS1o0hTyHL7JzA&s" alt="Book Image">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFkMe6fYtk_pCaoMCDUo5nsS1o0hTyHL7JzA&s"alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFkMe6fYtk_pCaoMCDUo5nsS1o0hTyHL7JzA&s"alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFkMe6fYtk_pCaoMCDUo5nsS1o0hTyHL7JzA&s"alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFkMe6fYtk_pCaoMCDUo5nsS1o0hTyHL7JzA&s"alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-        <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="">
-       
-        
-    </div>
-</div>
+    
+    <!-- Category 1: Physics -->
+    <section class="category-section">
+        <h2>Physics</h2>
+        <div class="category">
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Master Resource Book in Physics">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
  
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Master Resource Book in Physics">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
 
-<script src="Management.js"></script>
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Master Resource Book in Physics">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Master Resource Book in Physics">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Master Resource Book in Physics">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Master Resource Book in Physics">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Master Resource Book in Physics">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Master Resource Book in Physics">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Ride</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Master Resource Book in Physics">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Master Resource Book in Physics">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+            <!-- Add more-->
+        </div>
+    </section>
+
+    <!-- Category 2: Chemistry -->
+    <section class="category-section">
+        <h2>Chemistry</h2>
+        <div class="category">
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/61mjWoSNcRL._AC_UF1000,1000_QL80_.jpg" alt="Chemistry Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+            <!--  more books  -->
+        </div>
+    </section>
+
+    <!-- Category 3: Mathematics -->
+    <section class="category-section">
+        <h2>Mathematics</h2>
+        <div class="category">
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+            <!-- more books -->
+        </div>
+    </section>
+    
+    <!-- Computer Science all -->
+    <section class="category-section">
+        <h2>Computer Science</h2>
+        <div class="category">
+            <div class="book-item">
+                <img src=" https://m.media-amazon.com/images/I/51QNGsDyIoL.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://m.media-amazon.com/images/I/51QNGsDyIoL.jpg">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://m.media-amazon.com/images/I/51QNGsDyIoL.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://m.media-amazon.com/images/I/51QNGsDyIoL.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://m.media-amazon.com/images/I/51QNGsDyIoL.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://m.media-amazon.com/images/I/51QNGsDyIoL.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://m.media-amazon.com/images/I/51QNGsDyIoL.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://m.media-amazon.com/images/I/51QNGsDyIoL.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://m.media-amazon.com/images/I/51QNGsDyIoL.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div> 
+
+            <div class="book-item">
+                <img src=" https://m.media-amazon.com/images/I/51QNGsDyIoL.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+            <!-- more books -->
+        </div>
+    </section>
+         
+    
+    <!-- Biology all -->
+    <section class="category-section">
+        <h2> Biology </h2>
+        <div class="category">
+            <div class="book-item">
+                <img src=" https://tse1.mm.bing.net/th/id/OIP.TCu0XuJr0m1A_6KrfvFRJgAAAA?rs=1&pid=ImgDetMain " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://tse1.mm.bing.net/th/id/OIP.TCu0XuJr0m1A_6KrfvFRJgAAAA?rs=1&pid=ImgDetMain">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.TCu0XuJr0m1A_6KrfvFRJgAAAA?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="  https://tse1.mm.bing.net/th/id/OIP.TCu0XuJr0m1A_6KrfvFRJgAAAA?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="  https://tse1.mm.bing.net/th/id/OIP.TCu0XuJr0m1A_6KrfvFRJgAAAA?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://tse1.mm.bing.net/th/id/OIP.TCu0XuJr0m1A_6KrfvFRJgAAAA?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://tse1.mm.bing.net/th/id/OIP.TCu0XuJr0m1A_6KrfvFRJgAAAA?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://tse1.mm.bing.net/th/id/OIP.TCu0XuJr0m1A_6KrfvFRJgAAAA?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div> 
+
+            <div class="book-item">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.TCu0XuJr0m1A_6KrfvFRJgAAAA?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+            <!-- more books -->
+        </div>
+    </section>
+
+
+
+    <!-- Self-Help & Motivation all  -->
+
+
+    <section class="category-section">
+        <h2> Self-Help & Motivation </h2>
+        <div class="category">
+            <div class="book-item">
+                <img src=" https://d1csarkz8obe9u.cloudfront.net/posterpreviews/self-help-motivation-book-design-cover-templa-template-8cef6d1e7c91545c9f0209097b8f26b4_screen.jpg?ts=1704898826 " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://d1csarkz8obe9u.cloudfront.net/posterpreviews/self-help-motivation-book-design-cover-templa-template-8cef6d1e7c91545c9f0209097b8f26b4_screen.jpg?ts=1704898826">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://d1csarkz8obe9u.cloudfront.net/posterpreviews/self-help-motivation-book-design-cover-templa-template-8cef6d1e7c91545c9f0209097b8f26b4_screen.jpg?ts=1704898826" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="  https://d1csarkz8obe9u.cloudfront.net/posterpreviews/self-help-motivation-book-design-cover-templa-template-8cef6d1e7c91545c9f0209097b8f26b4_screen.jpg?ts=1704898826" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://d1csarkz8obe9u.cloudfront.net/posterpreviews/self-help-motivation-book-design-cover-templa-template-8cef6d1e7c91545c9f0209097b8f26b4_screen.jpg?ts=1704898826" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+
+            <div class="book-item">
+                <img src="  https://d1csarkz8obe9u.cloudfront.net/posterpreviews/self-help-motivation-book-design-cover-templa-template-8cef6d1e7c91545c9f0209097b8f26b4_screen.jpg?ts=1704898826" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+            <!-- more books -->
+        </div>
+    </section>
+
+
+
+    <!-- Art & Design all -->
+
+    <section class="category-section">
+        <h2> Art & Design </h2>
+        <div class="category">
+            <div class="book-item">
+                <img src=" https://media.karousell.com/media/photos/products/2020/6/8/crescent_city_by_sarah_j_maas__1591599798_ab9a7299_progressive.jpg " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://media.karousell.com/media/photos/products/2020/6/8/crescent_city_by_sarah_j_maas__1591599798_ab9a7299_progressive.jpg " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://media.karousell.com/media/photos/products/2020/6/8/crescent_city_by_sarah_j_maas__1591599798_ab9a7299_progressive.jpg " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://media.karousell.com/media/photos/products/2020/6/8/crescent_city_by_sarah_j_maas__1591599798_ab9a7299_progressive.jpg " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://media.karousell.com/media/photos/products/2020/6/8/crescent_city_by_sarah_j_maas__1591599798_ab9a7299_progressive.jpg " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            
+            <div class="book-item">
+                <img src=" https://media.karousell.com/media/photos/products/2020/6/8/crescent_city_by_sarah_j_maas__1591599798_ab9a7299_progressive.jpg " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+            <!-- more books -->
+        </div>
+    </section>
+
+
+    <!-- Psychology all -->
+    
+    <section class="category-section">
+        <h2> Psychology </h2>
+        <div class="category">
+            <div class="book-item">
+                <img src=" https://th.bing.com/th/id/OIP.g_cuuD7l4bgnO0j48FQyOQHaJ4?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="  https://th.bing.com/th/id/OIP.g_cuuD7l4bgnO0j48FQyOQHaJ4?rs=1&pid=ImgDetMain " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://th.bing.com/th/id/OIP.g_cuuD7l4bgnO0j48FQyOQHaJ4?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://th.bing.com/th/id/OIP.g_cuuD7l4bgnO0j48FQyOQHaJ4?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://th.bing.com/th/id/OIP.g_cuuD7l4bgnO0j48FQyOQHaJ4?rs=1&pid=ImgDetMain" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            
+            <div class="book-item">
+                <img src=" https://th.bing.com/th/id/OIP.g_cuuD7l4bgnO0j48FQyOQHaJ4?rs=1&pid=ImgDetMain " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+            <!-- more books -->
+        </div>
+    </section>
+
+
+    <!-- Literature all -->
+
+    
+    <section class="category-section">
+        <h2> Literature </h2>
+        <div class="category">
+            <div class="book-item">
+                <img src="  https://1.bp.blogspot.com/-idcciX9qbUI/X94BOWyBSTI/AAAAAAAAJcY/jKtkS2AjXTALeML0UE6iy8ZLKMbaJEh8ACLcBGAsYHQ/s1360/61z%252B9WJfXtL._AC_SL1500_.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://1.bp.blogspot.com/-idcciX9qbUI/X94BOWyBSTI/AAAAAAAAJcY/jKtkS2AjXTALeML0UE6iy8ZLKMbaJEh8ACLcBGAsYHQ/s1360/61z%252B9WJfXtL._AC_SL1500_.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="  https://1.bp.blogspot.com/-idcciX9qbUI/X94BOWyBSTI/AAAAAAAAJcY/jKtkS2AjXTALeML0UE6iy8ZLKMbaJEh8ACLcBGAsYHQ/s1360/61z%252B9WJfXtL._AC_SL1500_.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://1.bp.blogspot.com/-idcciX9qbUI/X94BOWyBSTI/AAAAAAAAJcY/jKtkS2AjXTALeML0UE6iy8ZLKMbaJEh8ACLcBGAsYHQ/s1360/61z%252B9WJfXtL._AC_SL1500_.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="  https://1.bp.blogspot.com/-idcciX9qbUI/X94BOWyBSTI/AAAAAAAAJcY/jKtkS2AjXTALeML0UE6iy8ZLKMbaJEh8ACLcBGAsYHQ/s1360/61z%252B9WJfXtL._AC_SL1500_.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            
+            <div class="book-item">
+                <img src=" https://1.bp.blogspot.com/-idcciX9qbUI/X94BOWyBSTI/AAAAAAAAJcY/jKtkS2AjXTALeML0UE6iy8ZLKMbaJEh8ACLcBGAsYHQ/s1360/61z%252B9WJfXtL._AC_SL1500_.jpg " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+            <!-- more books -->
+        </div>
+    </section>
+
+
+    <!-- Business & Management -->
+    
+    <section class="category-section">
+        <h2> Business & Management </h2>
+        <div class="category">
+            <div class="book-item">
+                <img src=" https://marketplace.canva.com/EAFFuSdpU6o/1/0/501w/canva-blue-modern-learn-to-grow-business-book-cover-rP8tZRTiRBo.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="  https://marketplace.canva.com/EAFFuSdpU6o/1/0/501w/canva-blue-modern-learn-to-grow-business-book-cover-rP8tZRTiRBo.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="  https://marketplace.canva.com/EAFFuSdpU6o/1/0/501w/canva-blue-modern-learn-to-grow-business-book-cover-rP8tZRTiRBo.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src=" https://marketplace.canva.com/EAFFuSdpU6o/1/0/501w/canva-blue-modern-learn-to-grow-business-book-cover-rP8tZRTiRBo.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            <div class="book-item">
+                <img src="  https://marketplace.canva.com/EAFFuSdpU6o/1/0/501w/canva-blue-modern-learn-to-grow-business-book-cover-rP8tZRTiRBo.jpg" alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+
+            
+            <div class="book-item">
+                <img src=" https://marketplace.canva.com/EAFFuSdpU6o/1/0/501w/canva-blue-modern-learn-to-grow-business-book-cover-rP8tZRTiRBo.jpg " alt="Mathematics Book">
+                <div class="book-overlay">
+                    <button class="complete-btn">Complete</button>
+                    <button class="click-btn">Click to Read</button>
+                </div>
+            </div>
+            <!-- more books -->
+        </div>
+    </section>
+
+
+    <!-- Add more categories  -->
+
+
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
