@@ -1,89 +1,189 @@
+ 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
+ 
 body {
-    background-color: teal;
     font-family: Arial, sans-serif;
-    color: white;
+    background-color: #f4f4f4;
 }
-
-section {
-    background-color: green;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid black;
-}
-
+ 
 #title {
-    font-size: 28px;
-}
-
-.container {
-    max-width: 900px;
-    margin: 50px auto;
-    background-color: white;
-    border-radius: 10px;
+    text-align: center;
+    font-size: 2em;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #0004f8;
+    color: white;
+    font-weight: bold;
 }
-
-h1 {
-    text-align: center;
-    color: #333;
-    font-size: 42px;
-}
-
-#select, #adddelete {
-    display: inline;
-    margin: 10px;
-}
-
-#select {
-    font-size: 42px;
-    color: rgb(220, 62, 240);
-    padding: 9px;
-    margin-top: 5px;
-    border: 1px solid white;
-}
-
-#add, #delete {
-    margin-left: 30px;
-    font-size: 20px;
-    padding: 10px 50px;
-    background-color: gold;
-    border: 1px solid #fff;
-    cursor: pointer;
-}
-
-#add:hover, #delete:hover {
-    background-color: darkgoldenrod;
-}
-
-img {
-    height: 230px;
-    width: 200px;
-    margin-left: 15px;
-    margin-top: 25px;
-    padding: 15px;
-    display: inline-block;
-}
-
+ 
 nav {
+    background-color: #7d15ec;
+    padding: 10px 0;
     text-align: center;
-    margin-top: 20px;
 }
 
 nav a {
     color: white;
-    margin: 15px;
-    font-size: 20px;
     text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1em;
 }
 
 nav a:hover {
+    color: #f1f1f1;
     text-decoration: underline;
+}
+ 
+#search-bar-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#search-bar {
+    padding: 10px;
+    width: 60%;
+    font-size: 1.2em;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    background-color: #ed0e0e;
+    color: rgb(2, 17, 6);
+    border-radius: 5px;
+}
+
+#search-btn:hover {
+    background-color: #555;
+}
+ 
+.container {
+    margin: 20px;
+}
+ 
+.category-section {
+    margin-bottom: 40px;
+}
+
+.category-section h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #3010e7;
+}
+ 
+.category {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.book-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(85, 238, 3, 0.1);
+    background-color: white;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+ 
+.book-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(4, 188, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.book-item:hover .book-overlay {
+    opacity: 1;
+}
+
+.complete-btn, .click-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 1em;
+}
+
+.complete-btn:hover, .click-btn:hover {
+    background-color: #555;
+}
+ 
+h1#select {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+ 
+@media screen and (max-width: 768px) {
+    #search-bar {
+        width: 80%;
+    }
+
+    .category {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+
+    #title {
+        font-size: 1.5em;
+    }
+
+    h1#select {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #search-bar {
+        width: 90%;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        margin: 0 5px;
+    }
+
+    h1#select {
+        font-size: 1.8em;
+    }
+}
+ 
+.book-item {
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-item:hover {
+    transform: scale(1.05);
 }
