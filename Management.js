@@ -1,27 +1,43 @@
-document.getElementById("submit-btn").addEventListener("click", function () {
-    const title = document.getElementById("title").value;
-    const author = document.getElementById("author").value;
-    const summary = document.getElementById("summary").value;
-    const isbn = document.getElementById("isbn").value;
-
-    const genres = [];
-    if (document.getElementById("fantasy").checked) genres.push("Fantasy");
-    if (document.getElementById("sci-fi").checked) genres.push("Science Fiction");
-    if (document.getElementById("poetry").checked) genres.push("Poetry");
-    if (document.getElementById("action").checked) genres.push("Action");
-
-     
-    console.log({
-        title,
-        author,
-        summary,
-        isbn,
-        genres
+function searchBooks() {
+    let query = document.getElementById('search-bar').value.toLowerCase();
+    let bookItems = document.querySelectorAll('.book-item');
+    
+    bookItems.forEach((book) => {
+        let bookTitle = book.querySelector('img').alt.toLowerCase();  
+        if (bookTitle.includes(query)) {
+            book.style.display = 'block';
+        } else {
+            book.style.display = 'none';
+        }
     });
+}
  
-    document.getElementById("title").value = "";
-    document.getElementById("author").value = "";
-    document.getElementById("summary").value = "";
-    document.getElementById("isbn").value = "";
-    alert("Book added successfully!");
+document.addEventListener("DOMContentLoaded", function () {
+    const completeButtons = document.querySelectorAll('.complete-btn');
+    const clickButtons = document.querySelectorAll('.click-btn');
+ 
+    completeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            alert('You completed this book!');
+        });
+    });
+
+    clickButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            alert('Ride the book!');
+        });
+    });
 });
+function searchBooks() {
+    const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+    const bookItems = document.querySelectorAll('.book-item');
+    
+    bookItems.forEach(item => {
+        const title = item.querySelector('img').alt.toLowerCase();
+        if (title.includes(searchTerm)) {
+            item.style.display = 'block';   
+        } else {
+            item.style.display = 'none';   
+        }
+    });
+}
