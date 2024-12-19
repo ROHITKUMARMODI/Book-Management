@@ -1,4 +1,35 @@
 "# Book-Management" 
+# Book Management System
+
+A simple Book Management System designed to organize and manage a collection of books. This project allows users to view different books categorized by subject, search for specific books, and navigate through various sections like creating books, viewing books, and managing profiles.
+
+## Features
+
+- **Book Categories**: Books are grouped by subjects like Physics, Chemistry, Computer Science, and more.
+- **Book Details**: Each book displays an image, title, and buttons for additional actions such as marking the book as complete and clicking to read.
+- **Search Functionality**: Users can search for books using a search bar.
+- **Navigation**: Easy navigation links to create books, view all books, view the user profile, and logout.
+
+## Project Structure
+
+The project is structured as follows:
+
+- **`index.html`**: The homepage that displays the collection of books categorized by subject.
+- **`Management.css`**: The stylesheet responsible for styling the pages, including layout and visual design.
+- **`Management.js`**: The JavaScript file for managing the search functionality and other interactive elements like buttons for book actions.
+- **`Createbook.html`**: A page to create and add new books to the system.
+- **`view-books.html`**: A page to view all books in the collection.
+- **`Profile.html`**: The profile page where users can manage their information.
+- **`logout.html`**: A page to log out of the system.
+
+## Installation
+
+To set up the project locally:
+
+1. Clone the repository to your local machine.
+   ```bash
+   git clone <repository-url>
+
 # Book Management System - Login Page
 
 This is a simple login page for a Book Management System where users can log in using their name, email, and a One-Time Password (OTP). The system generates an OTP which the user enters to complete the login process. Upon successful login, the user is redirected to the main page of the Book Management System.
