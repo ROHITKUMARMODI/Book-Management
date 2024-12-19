@@ -154,8 +154,8 @@ p {
             const otpValue = document.getElementById('otp').value;
             const correctOtp = document.getElementById('otp').value;
             if (otpValue === correctOtp) {
-                alert("Login successful!"); 
-                
+                alert("Login successful!");
+                window.location.href = "Management.html"; // Redirect to the main page
             } else {
                 document.getElementById('message').textContent = "Incorrect OTP!";
             }
