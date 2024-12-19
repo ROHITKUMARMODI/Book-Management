@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #4ea07d;
+      background-color: rgb(97, 94, 84);
       color: #E0E0E0;
       margin: 0;
       padding: 20px;
@@ -52,13 +52,30 @@
       background-color: #BB86FC;
       color: #121212;
     }
-    button:hover {
+    home-button:hover {
       opacity: 0.9;
+    }
+    .home-button-container {
+      display: inline-block;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #9db0c4;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .button:hover {
+      background-color: #5193a0;
     }
   </style>
 </head>
 <body>
-
+  <div class="button">
+    <a href="management02.html" >Home</a>
+  </div>
 <div class="container">
   <h1>Edit Book</h1>
   <form id="edit-book-form">
@@ -73,17 +90,22 @@
     <div class="form-group">
       <label for="genre">Genre</label>
       <select id="genre" name="genre">
-        <option value="Fiction">Fiction</option>
-        <option value="Non-Fiction">Non-Fiction</option>
-        <option value="Science">Science</option>
-        <option value="History">History</option>
-        <option value="Action">Action</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Biology">Biology</option>
+        <option value="Self-Help & Motivation">Self-Help & Motivation</option>
+        <option value="Art & Design">Art & Design</option>
+        <option value="Psychology">Psychology</option>
+        <option value="Literature">Literature</option>
+        <option value="Business & Management">Business & Management</option>
       </select>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="year">Publication Year</label>
       <input type="number" id="year" name="year" min="1000" max="9999">
-    </div>
+    </div> -->
     <div class="form-group">
       <label for="isbn">ISBN</label>
       <input type="text" id="isbn" name="isbn" required>
@@ -96,7 +118,7 @@
       <label for="description">Description</label>
       <textarea id="description" name="description" rows="4"></textarea>
     </div>
-<!--     <div class="form-group">
+    <!-- <div class="form-group">
       <label for="cover">Book Cover</label>
       <input type="file" id="cover" name="cover" accept="image/*">
     </div> -->
@@ -104,6 +126,7 @@
       <label for="image">Image URL</label>
       <input type="url" id="image" required>
     </div>
+
     
     <button type="submit" class="save-btn">Save Changes</button>
     <button type="button" class="cancel-btn" onclick="window.history.back()">Cancel</button>
