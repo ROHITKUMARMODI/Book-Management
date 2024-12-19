@@ -54,7 +54,7 @@
       margin: 5px 0;
       padding: 10px;
       border-radius: 5px;
-      display: none;  /* Initially hidden */
+      display: none;  
     }
 
     .close {
@@ -67,7 +67,9 @@
   </style>
 </head>
 <body>
+   
 <div id="profile-container">
+  <a href="Management.html" class="button" style="background-color: rgb(254, 254, 254); " >Home</a>
     <span class="close" id="close-profile">✖️</span>
     <div class="profile-header">
       <h1>🎟️User Profile🎟️</h1><hr>
@@ -104,7 +106,7 @@
       }
       closeProfile.onclick = function() { window.location.href = "Book.html"; }
 
-      // Automatically check and show completed books
+       
       for (var i = 0; i < bookCompletedCheckboxes.length; i++) {
         if (bookCompletedCheckboxes[i].nextSibling.nodeValue.includes("Status: Completed")) {
           bookCompletedCheckboxes[i].checked = true;
