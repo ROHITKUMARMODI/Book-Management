@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Management System</title>
-    <link rel="stylesheet" href="Management.css">
+    <link rel="stylesheet" href="management.css">
 </head>
 
 <body>
@@ -25,19 +25,35 @@
     <button id="search-btn" onclick="searchBooks()">Search</button>
 </section>
 
+<div class="genre-filter">
+    <label for="genre">Genre Filter</label>
+    <select id="genre-filter" name="genre">
+        <option value="all">All Category</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Biology">Biology</option>
+        <option value="Self-Help & Motivation">Self-Help & Motivation</option>
+        <option value="Art & Design">Art & Design</option>
+        <option value="Psychology">Psychology</option>
+        <option value="Skills Learning">Skills Learning</option>
+        <option value="Business & Management">Business & Management</option>
+    </select>
+</div>
+
+
 <div class="container">
     <h1 id="select">Collection of Books</h1>
     
     <!-- Category 1: Physics -->
-    <section class="category-section">
+    <section class="category-section" data-category="Physics">
         <div id="first">
-            <h2 style="background: linear-gradient(to right,green,rgb(212, 88, 26),gold,rgb(67, 67, 174), red, yellow,rgb(182, 8, 188));
-   -webkit-background-clip: text;
-   color: transparent;">PHYSICS</h2>
+            <h2>PHYSICS</h2>
         <div class="category">
             <div class="book-item">
                 <div id="heading">
-                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" style="height:355px;">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0lbrm80/book/j/r/j/master-resource-book-in-physics-for-jee-main-2022-original-imagcbvehbkzjnzx.jpeg?q=90&crop=false" style="height: 356px;">
                 <p>Physics JEE Main</p>
                 </div>
                 <div class="book-overlay">
@@ -149,11 +165,9 @@
     </section>
 
     <!-- Category 2: Chemistry -->
-    <section class="category-section">
+    <section class="category-section" data-category="Chemistry">
         <div id="second">
-        <h2 style="background: linear-gradient(to right,green,rgb(212, 88, 26),gold,rgb(67, 67, 174), red, yellow,rgb(182, 8, 188));
-        -webkit-background-clip: text;
-        color: transparent;">CHEMISTRY</h2>
+        <h2>CHEMISTRY</h2>
         <div class="category">
             <div class="book-item">
                 <div id="heading">
@@ -268,11 +282,9 @@
     </section>
 
     <!-- Category 3: Mathematics -->
-    <section class="category-section">
+    <section class="category-section" data-category="Mathematics">
         <div id="third">
-            <h2 style="background: linear-gradient(to right,green,rgb(212, 88, 26),gold,rgb(67, 67, 174), red, yellow,rgb(182, 8, 188));
-            -webkit-background-clip: text;
-            color: transparent;">MATHEMATICS</h2>
+            <h2>MATHEMATICS</h2>
         <div class="category">
             <div class="book-item">
                 <div id="heading">
@@ -390,11 +402,9 @@
     </section>
     
     <!-- Computer Science all -->
-    <section class="category-section">
+    <section class="category-section" data-category="Computer Science">
         <div id="fourth">
-            <h2 style="background: linear-gradient(to right,green,rgb(212, 88, 26),gold,rgb(67, 67, 174), red, yellow,rgb(182, 8, 188));
-            -webkit-background-clip: text;
-            color: transparent;">Computer Science</h2>
+            <h2>Computer Science</h2>
         <div class="category">
             <div class="book-item">
                 <div id="heading">
@@ -511,11 +521,9 @@
          
     
     <!-- Biology all -->
-    <section class="category-section">
+    <section class="category-section" data-category="Biology">
         <div id="fifth">
-            <h2 style="background: linear-gradient(to right,green,rgb(212, 88, 26),gold,rgb(67, 67, 174), red, yellow,rgb(182, 8, 188));
-            -webkit-background-clip: text;
-            color: transparent;">BIOLOGY</h2>
+            <h2>BIOLOGY</h2>
         <div class="category">
             <div class="book-item">
                 <div id="heading">
@@ -629,12 +637,14 @@
         </div>
     </section>
 
- 
-    <section class="category-section">
+
+
+    <!-- Self-Help & Motivation all  -->
+
+
+    <section class="category-section" data-category="Self-Help & Motivation">
         <div id="sixth">
-            <h2 style="background: linear-gradient(to right,green,rgb(212, 88, 26),gold,rgb(67, 67, 174), red, yellow,rgb(182, 8, 188));
-            -webkit-background-clip: text;
-            color: transparent;"> Self-Help & Motivation </h2>
+            <h2> Self-Help & Motivation </h2>
         <div class="category">
             <div class="book-item">
                 <div id="heading">
@@ -750,11 +760,9 @@
 
     <!-- Art & Design all -->
 
-    <section class="category-section">
+    <section class="category-section" data-category="Art & Design">
        <div id="seventh">
-         <h2 style="background: linear-gradient(to right,green,rgb(212, 88, 26),gold,rgb(67, 67, 174), red, yellow,rgb(182, 8, 188));
-         -webkit-background-clip: text;
-         color: transparent;"> Art & Design </h2>
+         <h2> Art & Design </h2>
         <div class="category">
             <div class="book-item">
                 <div id="heading">
@@ -780,7 +788,7 @@
 
             <div class="book-item">
                 <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBwMRuTwBN7R-qHp2NJz7B-BPxCOQ47O55ZQ&s" style="height:372px">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBwMRuTwBN7R-qHp2NJz7B-BPxCOQ47O55ZQ&s" style="height:370px">
                 <p>DRAWING & PAINTING</p>
                 </div>
                 <div class="book-overlay">
@@ -791,7 +799,7 @@
 
             <div class="book-item">
                 <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxdf0su7ZbqoPyppaV-BI-oR10KEwiJMnaw&s" style="height:372px">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxdf0su7ZbqoPyppaV-BI-oR10KEwiJMnaw&s" style="height:370px">
                 <p>INDIAN ART</p>
                 </div>
                 <div class="book-overlay">
@@ -801,10 +809,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStfHpAYJJ13JRgtKwo5z5coDvYzyg7bhxIAY1NoW4G0uD4detO8lqk4YvMMUegfUBv8wg&usqp=CAU" style="height:372px">
-                <p>ART BOOK DESIGN</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStfHpAYJJ13JRgtKwo5z5coDvYzyg7bhxIAY1NoW4G0uD4detO8lqk4YvMMUegfUBv8wg&usqp=CAU" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -813,50 +818,35 @@
 
             
             <div class="book-item">
-                <div id="heading">
-                <img src="https://www.malikbooksellers.com/wp-content/uploads/2022/11/var10.png" style="height:370px">
-                <p>Visual Art</p>
-                </div>
+                <img src="https://www.malikbooksellers.com/wp-content/uploads/2022/11/var10.png" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKPc7L8umVG9gqB4-aQ-xJP8AicCQpFKW6Ug&s" style="height:370px">
-                <p>ROBIN WILLIAM</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKPc7L8umVG9gqB4-aQ-xJP8AicCQpFKW6Ug&s" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1lFh8tEX_MUDZeYmBzz2SQOf2H-Y3oYM7bQ9m6MCyApZpafGDAw9AyPLBbWFf33K1l_Q&usqp=CAU" style="height:370px">
-                <p>Drawing - 6 </p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1lFh8tEX_MUDZeYmBzz2SQOf2H-Y3oYM7bQ9m6MCyApZpafGDAw9AyPLBbWFf33K1l_Q&usqp=CAU" style="height:109%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD1e5Qj2ti8_nmBdWQXsTGKA0x3HM39npJ4jhuj9MoQC6mDJ1zF9YxTndaXvbEFGiYcAc&usqp=CAU" style="height:370px">
-                <p>Art & Crafts</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD1e5Qj2ti8_nmBdWQXsTGKA0x3HM39npJ4jhuj9MoQC6mDJ1zF9YxTndaXvbEFGiYcAc&usqp=CAU" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT81a-Siive8ZXYsssluTK2R7_J5h4JfEkEW8PWvLZIQn3lTGkAipq-n3TyHixVzp4vkyc&usqp=CAU" style="height:370px">
-                <p>Histotry of Indian Art</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT81a-Siive8ZXYsssluTK2R7_J5h4JfEkEW8PWvLZIQn3lTGkAipq-n3TyHixVzp4vkyc&usqp=CAU" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -869,17 +859,12 @@
 
     <!-- Psychology all -->
     
-    <section class="category-section">
+    <section class="category-section" data-category="Psychology">
         <div id="eighth">
-            <h2 style="background: linear-gradient(to right,green,rgb(212, 88, 26),gold,rgb(67, 67, 174), red, yellow,rgb(182, 8, 188));
-            -webkit-background-clip: text;
-            color: transparent;"> PSYCHOLOGY </h2>
+            <h2> PSYCHOLOGY </h2>
         <div class="category">
             <div class="book-item">
-                <div id="heading">
-                <img src=" https://th.bing.com/th/id/OIP.g_cuuD7l4bgnO0j48FQyOQHaJ4?rs=1&pid=ImgDetMain" style="height:370px">
-                <p>PSYCHOLOGY</p>
-                </div>
+                <img src=" https://th.bing.com/th/id/OIP.g_cuuD7l4bgnO0j48FQyOQHaJ4?rs=1&pid=ImgDetMain" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -887,10 +872,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://rukminim2.flixcart.com/image/850/1000/k4ehnrk0/book/3/3/9/concise-textbook-of-human-psychology-original-imafagwpzsbek4g5.jpeg?q=20&crop=false" style="height:370px">
-                <p>Human Pschology</p>
-                </div>
+                <img src="https://rukminim2.flixcart.com/image/850/1000/k4ehnrk0/book/3/3/9/concise-textbook-of-human-psychology-original-imafagwpzsbek4g5.jpeg?q=20&crop=false" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -898,10 +880,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBXowgwNLCYaBqs6pkVTXCipJxCdAMpFF4DwDEvPbfOnzos76ZlOjV57f7_zVQASNZyUw&usqp=CAU" style="height:370px">
-                <p> Human Behaviour</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBXowgwNLCYaBqs6pkVTXCipJxCdAMpFF4DwDEvPbfOnzos76ZlOjV57f7_zVQASNZyUw&usqp=CAU" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -909,10 +888,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://www.integratedpublications.in/images/1714826630-recent-research-trends-in-psychology-volume-1.jpg" style="height:370px">
-                <p>Psychology Research</p>
-                </div>
+                <img src="https://www.integratedpublications.in/images/1714826630-recent-research-trends-in-psychology-volume-1.jpg" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -920,10 +896,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://m.media-amazon.com/images/I/510KrbP67WL.jpg"style="height:370px">
-                <p>JASON MILLER</p>
-                </div>
+                <img src="https://m.media-amazon.com/images/I/510KrbP67WL.jpg"style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -932,50 +905,35 @@
 
             
             <div class="book-item">
-                <div id="heading">
-                <img src="https://images.booksense.com/images/976/477/9798223477976.jpg" style="height:370px">
-                <p>Psychology Of Color</p>
-                </div>
+                <img src="https://images.booksense.com/images/976/477/9798223477976.jpg" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://blog.idonethis.com/wp-content/uploads/2019/09/image-7.png" style="height:370px">
-                <p>Simon Hazeldine</p>
-                </div>
+                <img src="https://blog.idonethis.com/wp-content/uploads/2019/09/image-7.png" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://static-01.daraz.pk/p/4506550c3a410e1b64ee059fff407dda.jpg" style="height:370px">
-                <p>Psychology EA part</p>
-                </div>
+                <img src="https://static-01.daraz.pk/p/4506550c3a410e1b64ee059fff407dda.jpg" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://bookshub.co.in/public/books/9789355933089.jpg" style="height:370px">
-                <p>Psychology CUET</p>
-                </div>
+                <img src="https://bookshub.co.in/public/books/9789355933089.jpg" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgIhK4LVoxGP4Jp6fFpwDBE8F3XRPWcsHxSx3Apqw1AU_Nwp2bW_9kpBkG6heLxP0ngFg&usqp=CAUk" style="height:370px">
-                <p>Psychology UGC</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgIhK4LVoxGP4Jp6fFpwDBE8F3XRPWcsHxSx3Apqw1AU_Nwp2bW_9kpBkG6heLxP0ngFg&usqp=CAUk" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -989,17 +947,12 @@
     <!-- Literature all -->
 
     
-    <section class="category-section">
+    <section class="category-section" data-category="Skills Learning">
         <div id="nineth">
-            <h2 style="background: linear-gradient(to right,green,rgb(212, 88, 26),gold,rgb(67, 67, 174), red, yellow,rgb(182, 8, 188));
-            -webkit-background-clip: text;
-            color: transparent;"> SKILLS LEARNING</h2>
+            <h2> SKILLS LEARNING</h2>
         <div class="category">
             <div class="book-item">
-                <DIV id="heading">
-                <img src="  https://1.bp.blogspot.com/-idcciX9qbUI/X94BOWyBSTI/AAAAAAAAJcY/jKtkS2AjXTALeML0UE6iy8ZLKMbaJEh8ACLcBGAsYHQ/s1360/61z%252B9WJfXtL.AC_SL1500.jpg" style="height:370px">
-                <p>Machine Learning</p>
-                </DIV>
+                <img src="  https://1.bp.blogspot.com/-idcciX9qbUI/X94BOWyBSTI/AAAAAAAAJcY/jKtkS2AjXTALeML0UE6iy8ZLKMbaJEh8ACLcBGAsYHQ/s1360/61z%252B9WJfXtL.AC_SL1500.jpg" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1007,10 +960,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ7PnoX5QfZ1RSemA8eQgnUOJUPVQejcvV2w&s" style="height:370px">
-                <p>Life Skills</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ7PnoX5QfZ1RSemA8eQgnUOJUPVQejcvV2w&s" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1018,10 +968,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWMJoWDWrplTjj61wOZrWKXQBIkta1NX8rpQ&s" style="height:370px">
-                <p>Communicate Skill</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWMJoWDWrplTjj61wOZrWKXQBIkta1NX8rpQ&s" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1029,10 +976,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1645350344i/60456410.jpg" style="height:370px">
-                <p>Essential life Skill</p>
-                </div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1645350344i/60456410.jpg" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1040,10 +984,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbWr-3Jtrjw5UoGUU5FwiG3jo06pvvFmjODFKUXOsPCn75z64loIfrqyhwAurfK7tj73k&usqp=CAU" style="height:370px">
-                <p>S Cannor</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbWr-3Jtrjw5UoGUU5FwiG3jo06pvvFmjODFKUXOsPCn75z64loIfrqyhwAurfK7tj73k&usqp=CAU" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1052,10 +993,7 @@
 
             
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJyn-OjdAq33FMUPycfA7RROLDliX8O5mfg&s" style="height:370px">
-                <p>English Skill</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJyn-OjdAq33FMUPycfA7RROLDliX8O5mfg&s" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1063,11 +1001,7 @@
             </div>
            
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQxaEPUa4EnQoU5KvzW-uf19GoguKNmGEoQn-Yhj5LDyq6fNgCfvZLjWdWXSPE9HhijRkWTV5FOJZEZmV1vru-xe-mV-X-ljyP_gPgB7YI&usqp=CAE" style="height:370px";>
-                <p>DR. Travis Bradberry</p>
-                </div>
-
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQxaEPUa4EnQoU5KvzW-uf19GoguKNmGEoQn-Yhj5LDyq6fNgCfvZLjWdWXSPE9HhijRkWTV5FOJZEZmV1vru-xe-mV-X-ljyP_gPgB7YI&usqp=CAE" style="height:100%;width:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1075,10 +1009,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted.google.com/books?id=WzuhDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&h=150&w=100" style="height:370px">
-                <p>Mindful Support</p>
-                </div>
+                <img src="https://encrypted.google.com/books?id=WzuhDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&h=150&w=100" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1086,10 +1017,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://books.google.co.in/books/publisher/content?id=6KT8DwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2_Ss8Kw1Ps62WaDj8nl9G8v3hjIA&w=1280" style="height:370px">
-                <p>MARILEE SPRENGER</p>
-                </div>
+                <img src="https://books.google.co.in/books/publisher/content?id=6KT8DwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2_Ss8Kw1Ps62WaDj8nl9G8v3hjIA&w=1280" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1097,10 +1025,7 @@
             </div>
 
             <div class="book-item">
-                <DIV id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTWcRdLCApVCoE2KWhxNBXMKufMA0nEmUiQ&s" style="height:370px">
-                <p>Mind Journal</p>
-                </DIV>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTWcRdLCApVCoE2KWhxNBXMKufMA0nEmUiQ&s" style="height:100%; width:250px">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1114,17 +1039,12 @@
 
     <!-- Business & Management -->
     
-    <section class="category-section">
+    <section class="category-section" data-category="Business & Management">
         <div id="tenth">
-            <h2 style="background: linear-gradient(to right,green,rgb(212, 88, 26),gold,rgb(67, 67, 174), red, yellow,rgb(182, 8, 188));
-            -webkit-background-clip: text;
-            color: transparent;"> Business & Management </h2>
+            <h2> Business & Management </h2>
         <div class="category">
             <div class="book-item">
-                <div id="heading">
-                <img src=" https://marketplace.canva.com/EAFFuSdpU6o/1/0/501w/canva-blue-modern-learn-to-grow-business-book-cover-rP8tZRTiRBo.jpg" style="height:370px">
-                <p>Grow Buisness</p>
-                </div>
+                <img src=" https://marketplace.canva.com/EAFFuSdpU6o/1/0/501w/canva-blue-modern-learn-to-grow-business-book-cover-rP8tZRTiRBo.jpg" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1132,10 +1052,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src=" https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTWP3dhWDa5ED8Sn2uspFOWYwInf55NuIqNevqiK47BFyfPjiNgYBkHp-XEfoeDPirGekBaDw7JoMVW7JGBT9fY_vuGYRdDaxF0BVH-XjR0mWTMBUKpOyZtVw&usqp=CAE" style="height:370px">
-                <p>Buisness Sutra</p>
-                </div>
+                <img src=" https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTWP3dhWDa5ED8Sn2uspFOWYwInf55NuIqNevqiK47BFyfPjiNgYBkHp-XEfoeDPirGekBaDw7JoMVW7JGBT9fY_vuGYRdDaxF0BVH-XjR0mWTMBUKpOyZtVw&usqp=CAE" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1143,10 +1060,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRUMi9NqCX4B7M-OhveRcMov1HIsTcsRY6kU2C9Xkr86J43P7a0vaRRdx7qAokppnw-Cjn_aa9QI-5V3afjGqVe5ZTyGvxZ5nfvTylisG7j-5LGfdKpJ77p_Q&usqp=CAE" style="height:370px">
-                <p>Matching Supply</p>
-                </div>
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRUMi9NqCX4B7M-OhveRcMov1HIsTcsRY6kU2C9Xkr86J43P7a0vaRRdx7qAokppnw-Cjn_aa9QI-5V3afjGqVe5ZTyGvxZ5nfvTylisG7j-5LGfdKpJ77p_Q&usqp=CAE" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1154,10 +1068,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS16Z3xa2iB4tNkdXtBNZ6lhfSAiKtqmpFpVx7NXyVvoPxXSd8elusJ2q2zrKWFzwu_OzA0RlMrAxMGJojig-ELWnYqFd3c4A&usqp=CAE" style="height:370px">
-                <p>Buisness Diploma</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS16Z3xa2iB4tNkdXtBNZ6lhfSAiKtqmpFpVx7NXyVvoPxXSd8elusJ2q2zrKWFzwu_OzA0RlMrAxMGJojig-ELWnYqFd3c4A&usqp=CAE" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1165,10 +1076,7 @@
             </div>
 
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcST7SRtRHpml0Iw4UtvllohOVKv70Ytd5U3Z6cqSjsH4hubBiXR1hCqgYyBduE8Ka_aegpKfxvzoi9-sZ16lmcWVOs83i5cGaPDjE5Yo89ckbWymGODbMQ1YA&usqp=CAE" style="height:370px">
-                <p>Management Principles</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcST7SRtRHpml0Iw4UtvllohOVKv70Ytd5U3Z6cqSjsH4hubBiXR1hCqgYyBduE8Ka_aegpKfxvzoi9-sZ16lmcWVOs83i5cGaPDjE5Yo89ckbWymGODbMQ1YA&usqp=CAE" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1177,50 +1085,35 @@
 
             
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxX5rPPcX5HAl0mKM2Jxac9T_ppzRh7OVzlheGHkK9VQiqIc3-XJep-e92PE_BS8S31UrZcPal9itlj-41fzjz5rOp63SwVKP0clrJ6OvM8Ujbg3fhJ6_W&usqp=CAE" style="height:370px">
-                <p>Management Arts</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxX5rPPcX5HAl0mKM2Jxac9T_ppzRh7OVzlheGHkK9VQiqIc3-XJep-e92PE_BS8S31UrZcPal9itlj-41fzjz5rOp63SwVKP0clrJ6OvM8Ujbg3fhJ6_W&usqp=CAE" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ7g1-tqZKYv73461RziUiP3ry-aR_HSAnYfHxg_-n459OMkq73mJ3RCP973M4ZV4Ivkp4Rz6991IG7y2fXS1r9GshAdj4BAikYTI00vwk&usqp=CAE" style="height:370px">
-                <p>Buisness Studies</p>
-                </div>
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ7g1-tqZKYv73461RziUiP3ry-aR_HSAnYfHxg_-n459OMkq73mJ3RCP973M4ZV4Ivkp4Rz6991IG7y2fXS1r9GshAdj4BAikYTI00vwk&usqp=CAE" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src=" https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQM8mvv-haDG6lI9-M9UDUzVlkHeYp_TPcgZf93ucbcCadritgQzsC_hrLY7OiVpixtlBFyLa79SJm5aewLfNfz3QDXWn1geOWZVDzkPzwQXdN88RYKZOFZ&usqp=CAE" style="height:370px">
-                <p>Buisness Oxford</p>
-              </div>
+                <img src=" https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQM8mvv-haDG6lI9-M9UDUzVlkHeYp_TPcgZf93ucbcCadritgQzsC_hrLY7OiVpixtlBFyLa79SJm5aewLfNfz3QDXWn1geOWZVDzkPzwQXdN88RYKZOFZ&usqp=CAE" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTosiJchKJNMB7fCp0wMVtDyX9ooXR6HPMRy_2Wp5baDfYqsUhiuhjvag670sjGKwEYV1ABurawRzIPN942owC_4iUnXEeBff0VFkTs0YCaCMB8q07z4qkT&usqp=CAE" style="height:370px">
-                <p>Practical Management</p>
-                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTosiJchKJNMB7fCp0wMVtDyX9ooXR6HPMRy_2Wp5baDfYqsUhiuhjvag670sjGKwEYV1ABurawRzIPN942owC_4iUnXEeBff0VFkTs0YCaCMB8q07z4qkT&usqp=CAE" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
                 </div>
             </div>
             <div class="book-item">
-                <div id="heading">
-                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSKEJqAI3wsGIki5eKr8Gjcx_PjAHNd4cikzxJOU3nkd4SWRUq0bACFHmjAYHghbrqotT-ZWkiyxiPj2sD99FQ4VWIRdtIWO82xYm6DdrizlJEFMGSahSpodQ&usqp=CAE" style="height:370px">
-                <p>BUISNESS STUDY - 12 </p>
-                </div>
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSKEJqAI3wsGIki5eKr8Gjcx_PjAHNd4cikzxJOU3nkd4SWRUq0bACFHmjAYHghbrqotT-ZWkiyxiPj2sD99FQ4VWIRdtIWO82xYm6DdrizlJEFMGSahSpodQ&usqp=CAE" style="height:100%">
                 <div class="book-overlay">
                     <button class="complete-btn">Complete</button>
                     <button class="click-btn">Click to Read</button>
@@ -1232,21 +1125,5 @@
     </section>
 </div>
 </body>
-<script src="Management.js"></script>
-    <script> 
-function searchBooks() {
-    const searchQuery = document.getElementById('search-bar').value.toLowerCase();
-    const bookItems = document.querySelectorAll('.book-item');
-     
-    bookItems.forEach(book => {
-        const bookName = book.getAttribute('data-name').toLowerCase();
-         
-        if (bookName.includes(searchQuery)) {
-            book.style.display = 'block';  
-        } else {
-            book.style.display = 'none';  
-        }
-    });
-}
-</script>
+<script src="management.js"></script>
 </html>
