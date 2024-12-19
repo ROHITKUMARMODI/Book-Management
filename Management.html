@@ -1233,4 +1233,20 @@
 </div>
 </body>
 <script src="Management.js"></script>
+    <script> 
+function searchBooks() {
+    const searchQuery = document.getElementById('search-bar').value.toLowerCase();
+    const bookItems = document.querySelectorAll('.book-item');
+     
+    bookItems.forEach(book => {
+        const bookName = book.getAttribute('data-name').toLowerCase();
+         
+        if (bookName.includes(searchQuery)) {
+            book.style.display = 'block';  
+        } else {
+            book.style.display = 'none';  
+        }
+    });
+}
+</script>
 </html>
