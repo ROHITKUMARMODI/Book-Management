@@ -41,3 +41,18 @@ function searchBooks() {
         }
     });
 }
+
+// Genre-filtering
+document.getElementById("genre-filter").addEventListener('change', function() {
+    const selectedGenre = this.value.toLowerCase();
+    const sections = document.querySelectorAll(".category-section");
+
+    sections.forEach(function(section) {
+        const category = section.getAttribute("data-category").toLowerCase();
+        if (selectedGenre === "all" || category === selectedGenre) {
+            section.style.display = "block";
+        } else {
+            section.style.display  = "none";
+        }
+    });
+});
