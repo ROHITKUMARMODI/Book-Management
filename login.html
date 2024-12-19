@@ -46,7 +46,7 @@ label {
     text-align: left;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"] {
     width: 100%;
     padding: 10px;
     font-size: 14px;
@@ -55,16 +55,7 @@ input[type="text"] {
     box-sizing: border-box;
     transition: border-color 0.3s ease;
 }
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="email"]:focus {
     border-color: #007bff;
     outline: none;
 }
@@ -124,9 +115,51 @@ p {
             <button type="button" id="generateOtp">Generate OTP</button>
             <button type="submit" id="login" disabled>Login</button>
         </form>
+        <p id="otpMessage"></p>
         <p id="message"></p>
     </div>
 
-    <script src="otp.js"></script>
+    <script> 
+        document.getElementById('generateOtp').addEventListener('click', function () { 
+            const otp = Math.floor(1000 + Math.random() * 1000); 
+            const otpMessageElement = document.getElementById('otpMessage');
+            otpMessageElement.textContent = `Your OTP is: ${otp}`; 
+            const otpElement = document.getElementById('otp');
+            otpElement.disabled = false;
+            otpElement.focus(); 
+            this.disabled = true; 
+            setTimeout(function () {
+                otpMessageElement.textContent = '';  
+                otpElement.value = '';  
+                otpElement.disabled = true;  
+                document.getElementById('generateOtp').disabled = false;  
+                document.getElementById('login').disabled = true;  
+                document.getElementById('message').textContent = "OTP has expired!";
+            }, 100000); 
+
+            otpElement.addEventListener('input', function () {
+                const enteredOtp = otpElement.value;
+                if (enteredOtp === otp.toString()) {
+                    document.getElementById('login').disabled = false;  
+                    document.getElementById('message').textContent = "";  
+                } else {
+                    document.getElementById('login').disabled = true; 
+                    document.getElementById('message').textContent = "Incorrect OTP!";
+                }
+            });
+        }); 
+
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const otpValue = document.getElementById('otp').value;
+            const correctOtp = document.getElementById('otp').value;
+            if (otpValue === correctOtp) {
+                alert("Login successful!"); 
+                
+            } else {
+                document.getElementById('message').textContent = "Incorrect OTP!";
+            }
+        });
+    </script>
 </body>
 </html>
